@@ -1,0 +1,38 @@
+.card-element {
+    .card-header {
+        display: flex;
+        align-items: center;
+
+        p {
+            padding-right: 1em;
+        }
+    }
+
+    .icon {
+        font-size: 1.2em;
+        cursor: pointer;
+
+        svg {
+            display: block;
+        }
+    }
+
+    .task-element {
+        display: flex;
+    }
+
+    .task {
+        &.completed {
+            text-decoration: line-through;
+        }
+
+        label {
+            user-select: none;
+        }
+    }
+    
+    .hidden {
+        display: none;
+    }
+}
+
