@@ -1,6 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import Checkbox from '@mui/material/Checkbox';
 
+/* TODO: Using redux for update completed status to localStorage */
+
 const Task = (props) => {
     const [onEdit, changeEditStatus] = useState(false);
     const [title, changeTitle] = useState(props.title);

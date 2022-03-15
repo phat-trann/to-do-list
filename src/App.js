@@ -5,9 +5,9 @@ import { Button, TextField } from '@mui/material';
 import './styles/card.scss';
 
 function App() {
-    const [index, updateIndex] = useState(0);
+    const [index, updateIndex] = useState(parseInt(localStorage.getItem('nextIndex') ?? 0));
     const [task, updateTask] = useState('');
-    const [tasks, updateTasks] = useState([]);
+    const [tasks, updateTasks] = useState(() => JSON.parse(localStorage.getItem('tasks')) ?? []);
     const [error, setError] = useState(false);
     const inputRef = useRef();
     const addNewTask = () => {
@@ -16,15 +16,22 @@ function App() {
             return;
         };
 
-        updateTasks((currentTasks) => [...currentTasks, {
-            id: index,
-            title: task,
-            isCompleted: false
-        }])
-        updateIndex(i => i + 1);
+        updateTasks(currentTasks => {
+            const newTasks = [...currentTasks, {
+                id: index,
+                title: task,
+                isCompleted: false
+            }];
+
+            localStorage.setItem('tasks', JSON.stringify(newTasks));
+
+            return newTasks;
+        })
+        updateIndex(index + 1);
         updateTask('');
-        inputRef.current.focus();
         setError(false);
+        inputRef.current.focus();
+        localStorage.setItem('nextIndex', index + 2);
     }
 
     return (
