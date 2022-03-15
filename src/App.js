@@ -1,19 +1,41 @@
-import Card from './components/Card';
-import { importData, getTasksByCardID } from './helpers/toDoHelpers';
+import { useState, useRef } from 'react';
+import Task from './components/Task';
+import { IoMdAddCircleOutline } from 'react-icons/io';
+
+import './styles/card.scss';
 
 function App() {
-    importData();
-
-    let cards = window.data.cards;
+    const [index, updateIndex] = useState(0);
+    const [task, updateTask] = useState('');
+    const [tasks, updateTasks] = useState([]);
+    const inputRef = useRef();
 
     return (
         <div className='App'>
+            <div className='form'>
+                <input type='text' onChange={(e) => updateTask(e.target.value)} value={task} ref={inputRef}/>
+                <div className='button icon' onClick={() => {
+                    if (task) {
+                        updateTasks((currentTasks) => [...currentTasks, {
+                            id: index,
+                            title: task,
+                            isCompleted: false
+                        }])
+                        updateIndex(i => i + 1);
+                        updateTask('');
+                        inputRef.current.focus();
+                    }
+                }}>
+                    <IoMdAddCircleOutline />
+                </div>
+            </div>
             {
-                cards.map(card => {
-                    let id = card.id;
+                tasks.map((task) => {
                     return (
-                        <Card title={card.title} id={id} tasks={getTasksByCardID(id)} key={id}/>
-                    );
+                        <div className='task-element' key={task.id}>
+                            <Task id={task.id} title={task.title} completed={task.isCompleted} />
+                        </div>
+                    )
                 })
             }
         </div>
