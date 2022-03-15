@@ -1,6 +1,7 @@
 import { useState, useRef } from 'react';
 import Task from './components/Task';
-import { IoMdAddCircleOutline } from 'react-icons/io';
+import Button from '@mui/material/Button';
+import TextField from '@mui/material/TextField';
 
 import './styles/card.scss';
 
@@ -8,9 +9,13 @@ function App() {
     const [index, updateIndex] = useState(0);
     const [task, updateTask] = useState('');
     const [tasks, updateTasks] = useState([]);
+    const [error, setError] = useState(false);
     const inputRef = useRef();
     const addNewTask = () => {
-        if (!task) return;
+        if (!task) {
+            setError(true);
+            return;
+        };
 
         updateTasks((currentTasks) => [...currentTasks, {
             id: index,
@@ -20,17 +25,24 @@ function App() {
         updateIndex(i => i + 1);
         updateTask('');
         inputRef.current.focus();
+        setError(false);
     }
 
     return (
         <div className='App'>
             <div className='form'>
-                <input type='text' onChange={(e) => updateTask(e.target.value)} value={task} ref={inputRef} onKeyDown={(e) => {
-                    (e.key === 'Enter') && addNewTask();
-                }}/>
-                <div className='button icon' onClick={addNewTask}>
-                    <IoMdAddCircleOutline />
-                </div>
+                <TextField id='outlined-basic'
+                    label='Task'
+                    variant='outlined'
+                    size='small'
+                    error={error}
+                    value={task}
+                    ref={inputRef}
+                    onChange={(e) => updateTask(e.target.value)}
+                    onKeyDown={(e) => {
+                        (e.key === 'Enter') && addNewTask();
+                    }} />
+                <Button onClick={addNewTask} variant='contained'>Enter Task</Button>
             </div>
             {
                 tasks.map((task) => {

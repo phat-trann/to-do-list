@@ -1,19 +1,21 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
+import Checkbox from '@mui/material/Checkbox';
 
 const Task = (props) => {
-    const id = props.id;
     const [onEdit, changeEditStatus] = useState(false);
     const [title, changeTitle] = useState(props.title);
     const [completed, changeStatus] = useState(props.completed);
+    const editRef = useRef();
+
+    useEffect(() => {
+        if (onEdit) {
+            editRef.current.focus();
+        }
+    }, [onEdit]);
 
     return (
         <div className={`task${completed ? ' completed' : ''}`}>
-            <input type='checkbox'
-                id={id}
-                checked={completed}
-                onChange={() => {
-                    changeStatus(!completed);
-                }} />
+            <Checkbox checked={completed} onChange={() => changeStatus(!completed)} />
 
             <label className={onEdit ? 'hidden' : ''}
                 onClick={() => {
@@ -22,6 +24,7 @@ const Task = (props) => {
 
             <input className={!onEdit ? 'hidden' : ''}
                 type='text'
+                ref={editRef}
                 value={title}
                 onChange={(e) => {
                     changeTitle(e.target.value);
