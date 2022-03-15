@@ -9,23 +9,26 @@ function App() {
     const [task, updateTask] = useState('');
     const [tasks, updateTasks] = useState([]);
     const inputRef = useRef();
+    const addNewTask = () => {
+        if (!task) return;
+
+        updateTasks((currentTasks) => [...currentTasks, {
+            id: index,
+            title: task,
+            isCompleted: false
+        }])
+        updateIndex(i => i + 1);
+        updateTask('');
+        inputRef.current.focus();
+    }
 
     return (
         <div className='App'>
             <div className='form'>
-                <input type='text' onChange={(e) => updateTask(e.target.value)} value={task} ref={inputRef}/>
-                <div className='button icon' onClick={() => {
-                    if (task) {
-                        updateTasks((currentTasks) => [...currentTasks, {
-                            id: index,
-                            title: task,
-                            isCompleted: false
-                        }])
-                        updateIndex(i => i + 1);
-                        updateTask('');
-                        inputRef.current.focus();
-                    }
-                }}>
+                <input type='text' onChange={(e) => updateTask(e.target.value)} value={task} ref={inputRef} onKeyDown={(e) => {
+                    (e.key === 'Enter') && addNewTask();
+                }}/>
+                <div className='button icon' onClick={addNewTask}>
                     <IoMdAddCircleOutline />
                 </div>
             </div>
