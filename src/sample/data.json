@@ -1,0 +1,512 @@
+{
+    "list": [
+        {
+            "id": 0,
+            "title": "Review",
+            "cards": [
+                {
+                    "id": 0,
+                    "title": "Collect store locator data"
+                },
+                {
+                    "id": 1,
+                    "title": "Staff Quota"
+                },
+                {
+                    "id": 2,
+                    "title": "Create Custom Contact Form"
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Feedback",
+            "cards": [
+                {
+                    "id": 3,
+                    "title": "Coupon Create"
+                },
+                {
+                    "id": 4,
+                    "title": "The info of advice of arrival is different from exact pricing info"
+                },
+                {
+                    "id": 5,
+                    "title": "CC Site Security Optimization"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Development",
+            "cards": [
+                {
+                    "id": 6,
+                    "title": "Product image zoom in is not working"
+                },
+                {
+                    "id": 7,
+                    "title": "PayPal message removal"
+                },
+                {
+                    "id": 8,
+                    "title": "Shipping surcharge UI changes"
+                }
+            ]
+        }
+    ],
+    "cards": [
+        {
+            "id": 0,
+            "title": "Collect store locator data",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        0,
+                        1,
+                        2,
+                        3
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        4,
+                        5
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 1,
+            "title": "Staff Quota",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        6,
+                        7,
+                        8
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        9,
+                        10
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "title": "Create Custom Contact Form",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        11
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        12,
+                        13,
+                        14,
+                        15
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "title": "Coupon Create",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        16,
+                        17,
+                        18
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        19,
+                        20,
+                        21
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "title": "The info of advice of arrival is different from exact pricing info",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        22,
+                        23,
+                        24
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        25
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "title": "CC Site Security Optimization",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        26,
+                        27,
+                        28,
+                        29
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        30,
+                        31,
+                        32
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "title": "Product image zoom in is not working",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        33,
+                        34,
+                        35
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        36
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "title": "PayPal message removal",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        37,
+                        38,
+                        39
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        40,
+                        41,
+                        42,
+                        43
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "title": "Shipping surcharge UI changes",
+            "tasks": [
+                {
+                    "group-name": "core",
+                    "tasks-id": [
+                        44,
+                        45,
+                        46,
+                        47,
+                        48,
+                        49
+                    ]
+                },
+                {
+                    "group-name": "base",
+                    "tasks-id": [
+                        50
+                    ]
+                }
+            ]
+        }
+    ],
+    "tasks": [
+        {
+            "id": 0,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/0",
+            "isCompleted": true
+        },
+        {
+            "id": 1,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/1",
+            "isCompleted": true
+        },
+        {
+            "id": 2,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/2",
+            "isCompleted": true
+        },
+        {
+            "id": 3,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/3",
+            "isCompleted": true
+        },
+        {
+            "id": 4,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/4",
+            "isCompleted": false
+        },
+        {
+            "id": 5,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/5",
+            "isCompleted": false
+        },
+        {
+            "id": 6,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/6",
+            "isCompleted": true
+        },
+        {
+            "id": 7,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/7",
+            "isCompleted": true
+        },
+        {
+            "id": 8,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/8",
+            "isCompleted": false
+        },
+        {
+            "id": 9,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/9",
+            "isCompleted": false
+        },
+        {
+            "id": 10,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/10",
+            "isCompleted": true
+        },
+        {
+            "id": 11,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/11",
+            "isCompleted": true
+        },
+        {
+            "id": 12,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/12",
+            "isCompleted": true
+        },
+        {
+            "id": 13,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/13",
+            "isCompleted": false
+        },
+        {
+            "id": 14,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/14",
+            "isCompleted": false
+        },
+        {
+            "id": 15,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/15",
+            "isCompleted": true
+        },
+        {
+            "id": 16,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/16",
+            "isCompleted": true
+        },
+        {
+            "id": 17,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/17",
+            "isCompleted": true
+        },
+        {
+            "id": 18,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/18",
+            "isCompleted": true
+        },
+        {
+            "id": 19,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/19",
+            "isCompleted": false
+        },
+        {
+            "id": 20,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/20",
+            "isCompleted": false
+        },
+        {
+            "id": 21,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/21",
+            "isCompleted": true
+        },
+        {
+            "id": 22,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/22",
+            "isCompleted": false
+        },
+        {
+            "id": 23,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/23",
+            "isCompleted": true
+        },
+        {
+            "id": 24,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/24",
+            "isCompleted": false
+        },
+        {
+            "id": 25,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/25",
+            "isCompleted": true
+        },
+        {
+            "id": 26,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/26",
+            "isCompleted": true
+        },
+        {
+            "id": 27,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/27",
+            "isCompleted": true
+        },
+        {
+            "id": 28,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/28",
+            "isCompleted": true
+        },
+        {
+            "id": 29,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/29",
+            "isCompleted": false
+        },
+        {
+            "id": 30,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/30",
+            "isCompleted": false
+        },
+        {
+            "id": 31,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/31",
+            "isCompleted": true
+        },
+        {
+            "id": 32,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/32",
+            "isCompleted": false
+        },
+        {
+            "id": 33,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/33",
+            "isCompleted": true
+        },
+        {
+            "id": 34,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/34",
+            "isCompleted": false
+        },
+        {
+            "id": 35,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/35",
+            "isCompleted": true
+        },
+        {
+            "id": 36,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/36",
+            "isCompleted": true
+        },
+        {
+            "id": 37,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/37",
+            "isCompleted": true
+        },
+        {
+            "id": 38,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/38",
+            "isCompleted": true
+        },
+        {
+            "id": 39,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/39",
+            "isCompleted": false
+        },
+        {
+            "id": 40,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/40",
+            "isCompleted": false
+        },
+        {
+            "id": 41,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/41",
+            "isCompleted": false
+        },
+        {
+            "id": 42,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/42",
+            "isCompleted": false
+        },
+        {
+            "id": 43,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/43",
+            "isCompleted": false
+        },
+        {
+            "id": 44,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/44",
+            "isCompleted": false
+        },
+        {
+            "id": 45,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/45",
+            "isCompleted": false
+        },
+        {
+            "id": 46,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/46",
+            "isCompleted": false
+        },
+        {
+            "id": 47,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/47",
+            "isCompleted": false
+        },
+        {
+            "id": 48,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/48",
+            "isCompleted": true
+        },
+        {
+            "id": 49,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/49",
+            "isCompleted": true
+        },
+        {
+            "id": 50,
+            "title": "https://regit.samsonite-asia.com/redmine/issues/50",
+            "isCompleted": false
+        }
+    ]
+}
