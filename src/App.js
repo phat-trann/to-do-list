@@ -1,7 +1,6 @@
 import { useState, useRef } from 'react';
 import Task from './components/Task';
-import Button from '@mui/material/Button';
-import TextField from '@mui/material/TextField';
+import { Button, TextField } from '@mui/material';
 
 import './styles/card.scss';
 
@@ -37,7 +36,7 @@ function App() {
                     size='small'
                     error={error}
                     value={task}
-                    ref={inputRef}
+                    inputRef={inputRef}
                     onChange={(e) => updateTask(e.target.value)}
                     onKeyDown={(e) => {
                         (e.key === 'Enter') && addNewTask();
