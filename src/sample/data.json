@@ -508,5 +508,8 @@
             "title": "https://regit.samsonite-asia.com/redmine/issues/50",
             "isCompleted": false
         }
-    ]
+    ],
+    "currentListID": 2,
+    "currentCardID": 8,
+    "currentTaskID": 50
 }

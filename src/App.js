@@ -1,19 +1,21 @@
 import Card from './components/Card';
+import { importData, getTasksByCardID } from './helpers/toDoHelpers';
 
 function App() {
-    let tasks = [{
-        id: 0,
-        title: 'Learn React',
-        isCompleted: false
-    },{
-        id: 1,
-        title: 'Working Hard',
-        isCompleted: true
-    }];
+    importData();
+
+    let cards = window.data.cards;
 
     return (
         <div className='App'>
-            <Card title='Card Title' id={1} tasks={tasks}/>
+            {
+                cards.map(card => {
+                    let id = card.id;
+                    return (
+                        <Card title={card.title} id={id} tasks={getTasksByCardID(id)} key={id}/>
+                    );
+                })
+            }
         </div>
     );
 }

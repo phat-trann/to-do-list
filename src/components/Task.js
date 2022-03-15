@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { getTasksData } from '../helpers/toDoHelpers';
 
 const Task = (props) => {
     const id = props.id;
@@ -12,12 +13,13 @@ const Task = (props) => {
                 id={id}
                 checked={completed}
                 onChange={() => {
-                    changeStatus(!completed)
+                    changeStatus(!completed);
+                    getTasksData(id).isCompleted = !completed;
                 }} />
 
             <label className={onEdit ? 'hidden' : ''}
                 onClick={(e) => {
-                    changeEditStatus(!onEdit)
+                    changeEditStatus(!onEdit);
                     /* TODO: Using useEffect to autofocus on current input section */
                 }}>{title}</label>
 
@@ -25,9 +27,10 @@ const Task = (props) => {
                 type='text'
                 value={title}
                 onChange={(e) => {
-                    changeTitle(e.target.value)
+                    changeTitle(e.target.value);
+                    getTasksData(id).title = e.target.value;
                 }} onBlur={() => {
-                    title && changeEditStatus(!onEdit)
+                    title && changeEditStatus(!onEdit);
                 }} />
         </div>
     );

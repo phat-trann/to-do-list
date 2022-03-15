@@ -1,0 +1,11 @@
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    .list {
+        .list-title {
+            color: red;
+            font-size: 2em;
+        }
+    }
+}
