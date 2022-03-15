@@ -60,195 +60,105 @@
             "id": 0,
             "title": "Collect store locator data",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        0,
-                        1,
-                        2,
-                        3
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        4,
-                        5
-                    ]
-                }
+                0,
+                1,
+                2,
+                3,
+                4,
+                5
             ]
         },
         {
             "id": 1,
             "title": "Staff Quota",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        6,
-                        7,
-                        8
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        9,
-                        10
-                    ]
-                }
+                6,
+                7,
+                8,
+                9,
+                10
             ]
         },
         {
             "id": 2,
             "title": "Create Custom Contact Form",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        11
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        12,
-                        13,
-                        14,
-                        15
-                    ]
-                }
+                11,
+                12,
+                13,
+                14,
+                15
             ]
         },
         {
             "id": 3,
             "title": "Coupon Create",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        16,
-                        17,
-                        18
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        19,
-                        20,
-                        21
-                    ]
-                }
+                16,
+                17,
+                18,
+                19,
+                20,
+                21
             ]
         },
         {
             "id": 4,
             "title": "The info of advice of arrival is different from exact pricing info",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        22,
-                        23,
-                        24
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        25
-                    ]
-                }
+                22,
+                23,
+                24,
+                25
             ]
         },
         {
             "id": 5,
             "title": "CC Site Security Optimization",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        26,
-                        27,
-                        28,
-                        29
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        30,
-                        31,
-                        32
-                    ]
-                }
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32
             ]
         },
         {
             "id": 6,
             "title": "Product image zoom in is not working",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        33,
-                        34,
-                        35
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        36
-                    ]
-                }
+                33,
+                34,
+                35,
+                36
             ]
         },
         {
             "id": 7,
             "title": "PayPal message removal",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        37,
-                        38,
-                        39
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        40,
-                        41,
-                        42,
-                        43
-                    ]
-                }
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43
             ]
         },
         {
             "id": 8,
             "title": "Shipping surcharge UI changes",
             "tasks": [
-                {
-                    "group-name": "core",
-                    "tasks-id": [
-                        44,
-                        45,
-                        46,
-                        47,
-                        48,
-                        49
-                    ]
-                },
-                {
-                    "group-name": "base",
-                    "tasks-id": [
-                        50
-                    ]
-                }
+                44,
+                45,
+                46,
+                47,
+                48,
+                49,
+                50
             ]
         }
     ],

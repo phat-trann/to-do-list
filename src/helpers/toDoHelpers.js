@@ -12,22 +12,25 @@ const generateID = () => {
     return 0;
 }
 
-const generateNewTask = () => {
+const generateNewTask = (cardID) => {
+    let newID = generateID();
     let newTask = {
-        id: generateID(),
+        id: newID,
         title: 'New task',
         isCompleted: false
     }
 
     window.data.tasks.push(newTask);
+    getCardData(cardID).tasks.push(newID);
 
     return newTask;
 }
 
-const removeItemByIndex = (arr, index) => {
+const removeItemByIndex = (cardID, arr, index) => {
     let newArr = arr.slice();
 
     newArr.splice(index, 1);
+    getCardData(cardID).tasks.splice(index, 1);
     return newArr;
 }
 
@@ -37,27 +40,20 @@ const getCardData = (id) => {
     return data.find(card => card.id === id);
 }
 
-const getTasksData = (id) => {
+const getTaskData = (id) => {
     let data = window.data.tasks;
 
     return data.find(task => task.id === id);
 }
 
 const getTasksByCardID = (cardID) => {
-    let cardData = getCardData(cardID);
-    let arr = [];
-
-    cardData.tasks.forEach((task) => {
-        arr = arr.concat(task['tasks-id']);
-    });
-
-    return arr.map(id => getTasksData(id));
+    return getCardData(cardID).tasks.map(id => getTaskData(id));
 }
 
 export {
     importData,
     generateNewTask,
     removeItemByIndex,
-    getTasksData,
+    getTaskData as getTasksData,
     getTasksByCardID
 }

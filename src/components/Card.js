@@ -16,7 +16,7 @@ const Card = (props) => {
         <div className={`card-element card-${id}`}>
             <div className='card-header'>
                 <p>{title}</p>
-                <div className='add icon' onClick={() => updateTasks(tasks.concat([generateNewTask()]))}>
+                <div className='add icon' onClick={() => updateTasks(tasks.concat([generateNewTask(id)]))}>
                     <IoMdAddCircleOutline />
                 </div>
             </div>
@@ -25,7 +25,7 @@ const Card = (props) => {
                     tasks.map((task, index) => {
                         return (
                             <div className='task-element' key={task.id}>
-                                <div className='remove icon' onClick={() => updateTasks(removeItemByIndex(tasks, index))}>
+                                <div className='remove icon' onClick={() => updateTasks(removeItemByIndex(id, tasks, index))}>
                                     <IoMdRemoveCircleOutline />
                                 </div>
                                 <Task id={task.id} title={task.title} completed={task.isCompleted} />
