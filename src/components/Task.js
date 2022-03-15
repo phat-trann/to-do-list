@@ -32,6 +32,8 @@ const Task = (props) => {
                     changeTitle(e.target.value);
                 }} onBlur={() => {
                     title && changeEditStatus(!onEdit);
+                }} onKeyDown={(e) => {
+                    (e.key === 'Enter' && title) && editRef.current.blur();
                 }} />
         </div>
     );
