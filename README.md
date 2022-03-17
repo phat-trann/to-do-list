@@ -8,3 +8,6 @@ Just simple To Do App using ReactJS
     + npm run build
     + serve -s build (-l [Post])
 - MUI: npm install @mui/material @emotion/react @emotion/styled
+- uuid: npm install uuid
+- redux: npm install redux
+- redux-devtools-extension: npm install react-devtools-extension

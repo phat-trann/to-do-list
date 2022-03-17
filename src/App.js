@@ -1,15 +1,19 @@
 import { useState, useRef } from 'react';
-import Task from './components/Task';
 import { Button, TextField, Grid, Paper, Snackbar, Alert } from '@mui/material';
+import { v4 as uuid } from 'uuid';
+import { useDispatch, useSelector } from 'react-redux';
+import { addTodo } from './redux/actions';
+
+import Task from './components/Task';
 
 import './styles/card.scss';
 
 function App() {
-    const [index, updateIndex] = useState(parseInt(localStorage.getItem('nextIndex') ?? 0));
     const [task, updateTask] = useState('');
-    const [tasks, updateTasks] = useState(() => JSON.parse(localStorage.getItem('tasks')) ?? []);
     const [error, setError] = useState(false);
+    const tasks = useSelector((tasks) => tasks);
     const inputRef = useRef();
+    const dispatch = useDispatch();
     const containerStyle = {
         maxWidth: '400px',
         margin: '10px auto',
@@ -21,24 +25,18 @@ function App() {
             return;
         };
 
-        updateTasks(currentTasks => {
-            const newTasks = [...currentTasks, {
-                id: index,
+        dispatch(
+            addTodo({
+                id: uuid(),
                 title: task,
                 isCompleted: false
-            }];
-
-            localStorage.setItem('tasks', JSON.stringify(newTasks));
-
-            return newTasks;
-        })
-        updateIndex(index + 1);
+            })
+        );
         updateTask('');
         setError(false);
         inputRef.current.focus();
-        localStorage.setItem('nextIndex', index + 2);
     }
-    const handleClose = (event, reason) => {
+    const handleClose = (_e, reason) => {
         if (reason === 'clickaway') {
             return;
         }
@@ -57,7 +55,7 @@ function App() {
             </Snackbar>
             <Paper elevation={20} className='App' style={containerStyle}>
                 <Grid className='form' container style={{ marginBottom: '20px' }}>
-                    <Grid xs={8}>
+                    <Grid item xs={8}>
                         <TextField id='outlined-basic'
                             label='Task'
                             variant='outlined'
@@ -70,7 +68,7 @@ function App() {
                                 (e.key === 'Enter') && addNewTask();
                             }} />
                     </Grid>
-                    <Grid xs={4}>
+                    <Grid item xs={4}>
                         <Button onClick={addNewTask} variant='contained'>Enter Task</Button>
                     </Grid>
                 </Grid>

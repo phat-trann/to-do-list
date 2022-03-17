@@ -1,13 +1,24 @@
 import { useState, useRef, useEffect } from 'react';
-import Checkbox from '@mui/material/Checkbox';
+import { useDispatch } from 'react-redux';
+import { updateTodo } from '../redux/actions';
 
-/* TODO: Using redux for update completed status to localStorage */
+import Checkbox from '@mui/material/Checkbox';
 
 const Task = (props) => {
     const [onEdit, changeEditStatus] = useState(false);
-    const [title, changeTitle] = useState(props.title);
-    const [completed, changeStatus] = useState(props.completed);
+    const title = props.title;
+    const completed = props.completed;
     const editRef = useRef();
+    const dispatch = useDispatch();
+    const dispatchToDo = (title, completed) => {
+        dispatch(
+            updateTodo({
+                id: props.id,
+                title: title,
+                isCompleted: completed
+            })
+        );
+    };
 
     useEffect(() => {
         if (onEdit) {
@@ -17,24 +28,18 @@ const Task = (props) => {
 
     return (
         <div className={`task${completed ? ' completed' : ''}`}>
-            <Checkbox checked={completed} onChange={() => changeStatus(!completed)} />
+            <Checkbox checked={completed} onChange={() => dispatchToDo(title, !completed)} />
 
-            <label className={onEdit ? 'hidden' : ''}
-                onClick={() => {
-                    changeEditStatus(!onEdit);
-                }}>{title}</label>
+            <label className={onEdit ? 'hidden' : ''} onClick={() => changeEditStatus(!onEdit)}>{title}</label>
 
             <input className={!onEdit ? 'hidden' : ''}
                 type='text'
                 ref={editRef}
                 value={title}
-                onChange={(e) => {
-                    changeTitle(e.target.value);
-                }} onBlur={() => {
-                    title && changeEditStatus(!onEdit);
-                }} onKeyDown={(e) => {
-                    (e.key === 'Enter' && title) && editRef.current.blur();
-                }} />
+                onChange={(e) => dispatchToDo(e.target.value, completed)}
+                onBlur={() => title && changeEditStatus(!onEdit)}
+                onKeyDown={(e) => (e.key === 'Enter' && title) && editRef.current.blur()}
+            />
         </div>
     );
 };
