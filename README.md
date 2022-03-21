@@ -1,4 +1,6 @@
 Just simple To Do App using ReactJS
+- Simple To Do App - branch basic
+- High level - branch master
 
 ### Using
 - sass: npm install sass
